@@ -23,6 +23,10 @@ header{
     margin-bottom: 56px;
 }
 
+.Bmenu{
+    display: none;
+}
+
 .submenu{
     display: none;
     border: 1px solid red;
@@ -103,4 +107,89 @@ aside .noticia{
     column-gap: 1%;
     row-gap: 5%;
     /*Deve sempre re calcular o tamanho dos espaçamentos caso coloque colunas, (espaço = 100%, itens total = 3, 100/3 = 33.3%, colunas 1%*2, 100-2=98/3=32.6%*/
+}
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    .container{
+        margin-bottom: 56px;
+    }
+
+    .destaque .noticia a{
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .destaque .noticia img{
+        margin-right:0;
+    }
+
+    .noticias {
+        display: block;
+    }
+
+    .noticias .noticia {
+        margin-bottom: 42px;
+    }
+
+    aside{
+        padding-left: 0;
+    }
+
+    header div.container{
+        flex-direction: column;
+    }
+
+.submenu{
+    display: block;
+    width: 100%;
+    position: relative;
+    border: none;
+
+}
+
+.menu{
+    display: none;
+}
+
+.menu > li{
+    clear: both;
+}
+
+.submenu li{
+    display: block;
+    padding: 8px;
+}
+
+.Bmenu{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.Bmenu button{
+    padding: 8px;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        max-width: 98%;
+    }
+
+    .destaque .noticia a {
+        font-size: 1.5em;
+    }
+
+    .noticias {
+        grid-template-columns: repeat(2, 49%);
+    }
 }
